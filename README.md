@@ -1,48 +1,81 @@
 # Password Strength Utility Library
 
-## Overview
-This project provides a comprehensive password-strength utility library designed to evaluate, analyze, and improve password security.  
-The library includes 15+ fully documented Python functions that validate password components, calculate entropy, detect repeated patterns, generate strong passwords, and provide complete strength assessments.
+## Project Title and Description
+The Password Strength Utility Library is a Python-based toolkit that analyzes, evaluates, and improves password security. It includes 15+ fully documented functions that validate password structure, check strength requirements, detect weak patterns, calculate entropy, identify common passwords, and generate secure random passwords. This library serves as the foundation for an object-oriented redesign in Project 02.
 
-These functions will later be refactored into object-oriented classes for Project 02.
 
----
+## Domain Focus and Problem Statement
+Password security is a critical component of modern information systems, yet users frequently create weak or predictable passwords. Common issues include short passwords, missing character types, repeated patterns, and the use of passwords found on common-password lists. These weaknesses make systems vulnerable to brute-force attacks, dictionary attacks, and credential stuffing.
 
-## Team Member
-- **Abdullah Khan** – Developer & Documentation Author
-
----
-
-## Problem Statement
-Weak passwords are one of the most common cybersecurity vulnerabilities. Many users create short, predictable, or commonly used passwords that attackers can easily guess through brute force, dictionary attacks, or pattern recognition.
-
-This project addresses that problem by developing a modular password utility library that can:
-- Validate password structure  
-- Check for uppercase, lowercase, digits, and special characters  
-- Calculate estimated password entropy  
-- Detect repeated or predictable patterns  
-- Identify common or weak passwords  
-- Generate strong random passwords  
-- Provide detailed evaluation summaries  
-
-The goal is to create a reusable and maintainable codebase that supports secure authentication systems.
+This project addresses this challenge by providing a reusable password-analysis function library that:
+- validates password structure
+- checks for uppercase, lowercase, digits, and special characters
+- calculates password entropy
+- detects repeated patterns (e.g., abcabc, 1212)
+- flags commonly used or compromised passwords
+- generates strong, random passwords
+- produces complete evaluation summaries for security audits
 
 ---
 
-## Repository Structure
+## Installation and Setup Instructions
 
-C:.
-│   .gitignore
-│   LICENSE
-│   README.md
-│
-├───docs
-│       function_reference.md
-│       usage_examples.md
-│
-├───examples
-│       demo_script.py
-│
-└───src
-    │   library_name.py
-    │   __init__.py
+### 1. Clone the repository
+git clone https://github.com/akhan146/Project_One_Abdullah-Khan.git
+
+## Usage Examples for Key Functions
+- Evaluate a password
+
+from src.library_name import advanced_password_evaluation
+
+print(advanced_password_evaluation("StrongPass#2025"))
+
+
+
+- Generate a strong password
+from src.library_name import generate_strong_password
+
+print(generate_strong_password(16))
+
+
+- Check password strength category
+from src.library_name import check_password_strength
+
+print(check_password_strength("Abc123!"))
+
+
+### Function Library Overview and Organization 
+
+## Simple Validation Functions
+
+is_non_empty() — checks if password is not empty
+
+has_min_length() — checks minimum length
+
+contains_uppercase() — detects uppercase letters
+
+contains_lowercase() — detects lowercase letters
+
+contains_digit() — detects numerical digits
+
+contains_special_char() — detects special characters
+
+## Medium Complexity Functions
+
+calculate_entropy() — estimates password entropy
+
+check_password_strength() — rates password as Weak/Medium/Strong
+
+count_character_types() — counts uppercase, lowercase, digits, special
+
+is_common_password() — checks if password is commonly used
+
+mask_password() — hides password for UI display
+
+## Complex Functions
+
+generate_strong_password() — creates a secure random password
+
+detect_repeated_patterns() — identifies repeated substring patterns
+
+advanced_password_evaluation() — full password analysis summary
