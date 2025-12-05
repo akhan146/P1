@@ -41,7 +41,7 @@ def has_min_length(password: str, min_length: int = 8) -> bool:
     return len(password) >= min_length
 
 
-# SIMPLE FUNCTION — checks for uppercase letters
+
 def contains_uppercase(password: str) -> bool:
     """Check if password contains at least one uppercase letter."""
     if not isinstance(password, str):
