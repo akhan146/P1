@@ -2,7 +2,7 @@ import re
 import string
 
 
-# SIMPLE FUNCTION — checks if password is non-empty
+
 def is_non_empty(password: str) -> bool:
     """Check if the password is non-empty.
 
@@ -20,7 +20,7 @@ def is_non_empty(password: str) -> bool:
     return len(password) > 0
 
 
-# SIMPLE FUNCTION — checks if password meets minimum length
+
 def has_min_length(password: str, min_length: int = 8) -> bool:
     """Check if password meets minimum length requirement.
 
@@ -49,7 +49,7 @@ def contains_uppercase(password: str) -> bool:
     return any(c.isupper() for c in password)
 
 
-# SIMPLE FUNCTION — checks for lowercase letters
+
 def contains_lowercase(password: str) -> bool:
     """Check if password contains at least one lowercase letter."""
     if not isinstance(password, str):
@@ -57,7 +57,7 @@ def contains_lowercase(password: str) -> bool:
     return any(c.islower() for c in password)
 
 
-# SIMPLE FUNCTION — checks for digits
+
 def contains_digit(password: str) -> bool:
     """Check if password contains at least one digit."""
     if not isinstance(password, str):
@@ -65,7 +65,7 @@ def contains_digit(password: str) -> bool:
     return any(c.isdigit() for c in password)
 
 
-# SIMPLE FUNCTION — checks for special characters
+
 def contains_special_char(password: str) -> bool:
     """Check if password contains at least one special character."""
     if not isinstance(password, str):
@@ -74,7 +74,7 @@ def contains_special_char(password: str) -> bool:
     return any(c in special_chars for c in password)
 
 
-# MEDIUM FUNCTION — calculates approximate entropy (strength estimate)
+
 def calculate_entropy(password: str) -> float:
     """Estimate the entropy (strength) of a password based on character sets.
 
@@ -104,7 +104,7 @@ def calculate_entropy(password: str) -> float:
     return round(len(password) * math.log2(pool), 2)
 
 
-# MEDIUM FUNCTION — determines overall password strength category
+
 def check_password_strength(password: str) -> str:
     """Categorize password as Weak, Medium, or Strong.
 
@@ -136,7 +136,7 @@ def check_password_strength(password: str) -> str:
         return "Strong"
 
 
-# MEDIUM FUNCTION — counts uppercase, lowercase, digits, and special chars
+
 def count_character_types(password: str) -> dict:
     """Return a dictionary with counts of letters, digits, and special chars.
 
@@ -159,7 +159,7 @@ def count_character_types(password: str) -> dict:
     return counts
 
 
-# MEDIUM FUNCTION — checks if password is common/basic
+
 def is_common_password(password: str, common_list: list = None) -> bool:
     """Check if password is in a list of common passwords.
 
@@ -176,7 +176,7 @@ def is_common_password(password: str, common_list: list = None) -> bool:
     return password.lower() in (p.lower() for p in common_list)
 
 
-# MEDIUM FUNCTION — returns a masked version (e.g., ******)
+
 def mask_password(password: str) -> str:
     """Return a masked version of the password (for UI display).
 
@@ -189,7 +189,7 @@ def mask_password(password: str) -> str:
     return '*' * len(password)
 
 
-# COMPLEX FUNCTION — generates a strong random password
+
 def generate_strong_password(length: int = 12) -> str:
     """Generate a random strong password containing letters, digits, and special chars.
 
@@ -223,7 +223,7 @@ def generate_strong_password(length: int = 12) -> str:
             return password
 
 
-# COMPLEX FUNCTION — detects repeated patterns (e.g., abcabc, 1212)
+
 def detect_repeated_patterns(password: str) -> bool:
     """Detect if a password contains repeated patterns like 'abcabc' or '1212'.
 
@@ -241,7 +241,7 @@ def detect_repeated_patterns(password: str) -> bool:
     return False
 
 
-# COMPLEX FUNCTION — returns full evaluation/summary of password security
+
 def advanced_password_evaluation(password: str) -> dict:
     """Perform a detailed evaluation including entropy, strength, common checks, and patterns.
 
@@ -263,7 +263,7 @@ def advanced_password_evaluation(password: str) -> dict:
     return evaluation
 
 
-# TESTING BLOCK — prints evaluation for several example passwords
+
 if __name__ == "__main__":
     test_passwords = ["password123!", "Abc$1234", "aaAA11!!", "", "StrongPass#2025"]
     for pwd in test_passwords:
